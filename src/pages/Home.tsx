@@ -23,7 +23,7 @@ const Home = () => {
     } else {
       setTimeout(() => {
         getData();
-      }, 5000);
+      }, 10000);
     }
   }, [pageValues.totalPage]);
 
