@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 
@@ -7,19 +6,14 @@ type State = {
   currentPosts: any[];
 };
 
-type State2 = {
+type Props = {
   pageValues: {
     currentPage: number;
     totalPage: number;
   };
 };
 
-// type Props = {
-//   currentPage: number;
-// };
-
-const Table = () => {
-  const pageValues = useSelector((state: State2) => state.pageValues);
+const Table = ({ pageValues }: Props) => {
   let currentPosts: {
     objectID: string;
     title: string;

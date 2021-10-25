@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -56,7 +56,7 @@ const Home = () => {
           Next Page
         </button>
       </div>
-      <Table />
+      <Table pageValues={pageValues} />
     </div>
   );
 };
